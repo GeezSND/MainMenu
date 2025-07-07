@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>D36d_Sh0t</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      font-family: 'Courier New', monospace;
+      overflow: hidden;
+      text-align: center;
+      color: #c100ff; /* новый пурпурный оттенок */
+      background-image: repeating-linear-gradient(
+        transparent,
+        transparent 2px,
+        rgba(255, 255, 255, 0.02) 3px
+      );
+      background-size: 100% 4px;
+    }
+
+    .vhs-effect {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(
+        rgba(193, 0, 255, 0.05) 0px,
+        rgba(193, 0, 255, 0.05) 2px,
+        transparent 4px,
+        transparent 6px
+      );
+      mix-blend-mode: screen;
+      animation: scanlines 0.5s infinite linear;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    @keyframes scanlines {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(4px); }
+    }
+
+    .static-noise {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://i.imgur.com/UfKH2Oa.gif');
+      opacity: 0.08;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .container {
+      position: relative;
+      z-index: 3;
+      padding-top: 80px;
+    }
+
+    h1 {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 1.8em;
+      text-shadow: 0 0 10px #c100ff, 0 0 20px #c100ff, 0 0 30px #ff66ff;
+      margin-bottom: 50px;
+      letter-spacing: 2px;
+    }
+
+    .menu-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .indicator {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border: 2px solid #c100ff;
+      background-color: #111;
+      margin-right: 15px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn {
+      display: block;
+      width: 260px;
+      padding: 15px;
+      background: #111;
+      color: #c100ff;
+      text-decoration: none;
+      border: 2px solid #c100ff;
+      border-radius: 12px;
+      font-size: 1.2em;
+      box-shadow: inset 0 0 10px #c100ff, 0 0 15px #c100ff;
+      transition: 0.3s ease;
+      position: relative;
+    }
+
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 15px;
+      background: #800080; /* тёмно-пурпурный для тени */
+      border-radius: 0 0 12px 12px;
+      transform: scaleY(0.7);
+      filter: blur(2px);
+      opacity: 0.8;
+    }
+
+    .menu-item:hover .indicator {
+      background-color: #c100ff;
+    }
+
+    .btn:hover {
+      background: #3b1a4f;
+      box-shadow: inset 0 0 20px #c100ff, 0 0 30px #c100ff;
+      animation: mild-shake 0.4s infinite;
+    }
+
+    @keyframes mild-shake {
+      0% { transform: translate(0, 0); }
+      25% { transform: translate(-1px, 1px); }
+      50% { transform: translate(1px, -1px); }
+      75% { transform: translate(-1px, -1px); }
+      100% { transform: translate(0, 0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="static-noise"></div>
+  <div class="vhs-effect"></div>
+  <div class="container">
+    <h1>D36d_Sh0t</h1>
+    <div class="menu-item">
+      <div class="indicator"></div>
+      <a class="btn" href="https://t.me/D36DSH0T" target="_blank">Telegram</a>
+    </div>
+    <div class="menu-item">
+      <div class="indicator"></div>
+      <a class="btn" href="https://www.donationalerts.com/r/d3ad_sh0t" target="_blank">Donation Alerts</a>
+    </div>
+    <div class="menu-item">
+      <div class="indicator"></div>
+      <a class="btn" href="https://youtube.com/@shadytheories25?si=jIEFNyoHZGG0F7V0" target="_blank">YouTube</a>
+    </div>
+    <div class="menu-item">
+      <div class="indicator"></div>
+      <a class="btn" href="https://www.tiktok.com/@dead.shot333?_t=ZN-8xnQNDYhtx8&_r=1" target="_blank">TikTok</a>
+    </div>
+    <div class="menu-item">
+      <div class="indicator"></div>
+      <a class="btn" href="https://vk.com/d36d_sh0t" target="_blank">VK Group</a>
+    </div>
+  </div>
+</body>
+</html>
